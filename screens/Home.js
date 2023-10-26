@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     },
     carouselItem: {
         width: '100%',
-        height: 200,
+        height: 150,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -281,12 +281,12 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '200',
         marginTop: wp('2%'),
-        marginBottom: wp('2%'),
+        marginBottom: wp('1.5%'),
         color: '#A1A1A1'
     },
 
     orchidDetailLine: {
-        marginBottom: hp('2%'),
+        marginBottom: hp('1.5%'),
         flexDirection: 'row',
         justifyContent: 'space-between'
     },

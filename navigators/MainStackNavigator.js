@@ -9,40 +9,11 @@ import { Favorite } from '../screens/Favorite';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 //Bottom navigator
-// const Tab = createBottomTabNavigator();
-// function MyTabs() {
-//     return (
-//         <Tab.Navigator>
-//             <Tab.Screen name="Home" component={Home} options={{
-//                 title: 'Home',
-//                 headerStyle: {
-//                     backgroundColor: '#152534',
-//                 },
-//                 headerTitleStyle: {
-//                     color: '#ffffff'
-//                 }
-//                 // tabBarIcon: ({ color }) => <Icon name="search" size={wp('7%')} color={color} />, headerShown: false
-//             }} />
-//             <Tab.Screen name="Favorite" component={Favorite} options={{
-//                 title: 'Favorite',
-//                 headerStyle: {
-//                     backgroundColor: '#152534',
-//                 },
-//                 headerTitleStyle: {
-//                     color: '#ffffff'
-//                 }
-//                 // tabBarIcon: ({ color }) => <Icon name="search" size={wp('7%')} color={color} />, headerShown: false
-//             }} />
-//         </Tab.Navigator>
-//     );
-// }
-
-const Stack = createNativeStackNavigator();
-const MainStackNavigator = () => {
+const Tab = createBottomTabNavigator();
+function MyTabs() {
     return (
-        <Stack.Navigator>
-            {/* <Stack.Screen name="HomePage" component={MyTabs} options={{ headerShown: false }} /> */}
-            <Stack.Screen name="Home" component={Home} options={{
+        <Tab.Navigator>
+            <Tab.Screen name="Home" component={Home} options={{
                 title: 'Home',
                 headerStyle: {
                     backgroundColor: '#152534',
@@ -50,7 +21,36 @@ const MainStackNavigator = () => {
                 headerTitleStyle: {
                     color: '#ffffff'
                 }
+                // tabBarIcon: ({ color }) => <Icon name="search" size={wp('7%')} color={color} />, headerShown: false
             }} />
+            <Tab.Screen name="Favorite" component={Favorite} options={{
+                title: 'Favorite',
+                headerStyle: {
+                    backgroundColor: '#152534',
+                },
+                headerTitleStyle: {
+                    color: '#ffffff'
+                }
+                // tabBarIcon: ({ color }) => <Icon name="search" size={wp('7%')} color={color} />, headerShown: false
+            }} />
+        </Tab.Navigator>
+    );
+}
+
+const Stack = createNativeStackNavigator();
+const MainStackNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="HomePage" component={MyTabs} options={{ headerShown: false }} />
+            {/* <Stack.Screen name="Home" component={Home} options={{
+                title: 'Home',
+                headerStyle: {
+                    backgroundColor: '#152534',
+                },
+                headerTitleStyle: {
+                    color: '#ffffff'
+                }
+            }} /> */}
             <Stack.Screen name="Detail" component={Detail} options={{
                 title: 'Detail',
                 headerStyle: {
